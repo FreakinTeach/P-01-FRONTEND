@@ -1,5 +1,5 @@
 import React from 'react'
-import './topnavigation.scss'
+import './topnavigation.css'
 
 export const TopNavigation = () => {
   return (

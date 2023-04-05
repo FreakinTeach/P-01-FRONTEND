@@ -2,16 +2,11 @@
   display: flex;
   flex-direction: column;
   height: 85vh;
-
+/* 
   .editorcompilerContainer {
-    display: flex;
-    section {
-      width: 50vw;
-      background-color: black;
-      color: white;
-    }
-  }
 
+  } */
+/* 
   button {
     padding: 10px 40px;
     outline: none;
@@ -20,5 +15,5 @@
     color: black;
     align-self: flex-start;
     cursor: pointer;
-  }
+  } */
 }

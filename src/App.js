@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.scss";
+import "./app.css";
 import { TopNavigation } from "./components/Navigation/TopNavigation";
 import { SideNavigation } from "./components/Navigation/SideNavigation";
 import { Compiler } from "./components/compiler/Compiler";

@@ -7,7 +7,7 @@ import axios from "axios";
 import brace from "brace";
 import "brace/mode/javascript";
 import "brace/theme/github";
-import "./compiler.scss";
+import "./compiler.css";
 
 export const Compiler = () => {
   const [storevalue, setstorevalue] = useState();

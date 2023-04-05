@@ -1,5 +1,5 @@
 import React from "react";
-import "./sidenavigation.scss";
+import "./sidenavigation.css";
 import { useNavigate } from "react-router-dom";
 
 
