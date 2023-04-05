@@ -4,7 +4,6 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools";
 import axios from "axios";
-import brace from "brace";
 import "brace/mode/javascript";
 import "brace/theme/github";
 import "./compiler.css";

@@ -1,0 +1,28 @@
+.parent{
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+
+}
+.child1{
+    width: 400px;
+    height: 400px;
+    border: 1px solid red;
+    display: flex;
+}
+.child2{
+    width: 400px;
+    height: 400px;
+    border: 1px solid green;
+}
+.child12{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(21, 0, 128);
+}
+.child11{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(128, 0, 11);
+}
