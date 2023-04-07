@@ -1,0 +1,15 @@
+.sncontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(7,54,85);
+    color: #ffffff;
+    height: 90vh;
+}
+.sncontainer p{
+    color: wheat;
+    font-size: 14px;
+    padding: 12px 8px;
+    margin: 0px;
+    font-weight: 700;
+
+}

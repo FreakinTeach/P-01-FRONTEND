@@ -1,0 +1,22 @@
+.compilerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
+.editorcompilerContainer {
+  display: flex;
+}
+
+button {
+  padding: 10px 40px;
+  outline: none;
+  border: none;
+  background-color: rgb(62,70,79);
+  color: wheat;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.ace_layer ace_print-margin-layer{
+  display: none;
+}

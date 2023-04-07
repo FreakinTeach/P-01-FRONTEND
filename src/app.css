@@ -1,0 +1,15 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.bodyconatiner {
+  display: flex;
+
+  /* section {
+    // display: flex;
+    // flex-direction: column;
+    height: 85vh;
+  } */
+}

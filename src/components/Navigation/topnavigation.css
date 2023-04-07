@@ -1,0 +1,15 @@
+.tncontainer {
+  display: flex;
+  padding: 12px 24px;
+  background-color: rgb(62,70,79);
+  justify-content: space-between;
+ 
+}
+
+.tncontainer p{
+  margin: 0;
+  padding: 2px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+}
