@@ -1,7 +1,7 @@
 .compilerContainer {
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  height: calc( 90vh - 10px );;
 }
 .editorcompilerContainer {
   display: flex;
