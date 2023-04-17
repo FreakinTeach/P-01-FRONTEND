@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./chat.css";
-import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import io from "socket.io-client";
 import {
   MainContainer,
