@@ -16,6 +16,7 @@ import {
   VideoCallButton,
   InfoButton,
 } from "@chatscope/chat-ui-kit-react";
+import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
 const socket = io.connect("http://localhost:3000");
 
