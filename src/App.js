@@ -6,12 +6,19 @@ import { Compiler } from "./components/compiler/Compiler";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Chat } from "./components/chat/Chat";
 import { CodeBank } from "./components/codebank/CodeBank";
+import { SignIn } from "./components/auth/SignIn";
+import { SignUp } from "./components/auth/SignUp";
 
 function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
         <TopNavigation />
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+
+        </Routes>
         <div className="bodyconatiner">
           <SideNavigation />
           <section>
@@ -21,6 +28,7 @@ function App() {
               <Route path="/code" element={<Compiler />} />
             </Routes>
           </section>
+         
         </div>
       </BrowserRouter>
     </div>
