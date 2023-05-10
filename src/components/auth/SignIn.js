@@ -3,6 +3,7 @@ import "./signin.css";
 import axios from "axios";
 
 export const SignIn = () => {
+  const [user,setUser] = useState()
   const [userValues, setuserValues] = useState({
     email: "",
     password: "",
@@ -18,11 +19,11 @@ export const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get("http://localhost:4000/user", {
-        usermail: userValues.usermail,
-        userpassword: userValues.password,
+      .get(`http://localhost:4000/user/${userValues.email}/${userValues.password}`)
+      .then((data) =>{
+        setUser(data.data[0])
+        localStorage.setItem('user',data.data[0])
       })
-      .then((data) => console.log(data))
       .catch((err) => console.log(err));
   };
 
