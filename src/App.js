@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <TopNavigation />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route exact path="/" element={<Main />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
