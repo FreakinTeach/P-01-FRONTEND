@@ -6,7 +6,7 @@ import { Compiler } from "./components/compiler/Compiler";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Chat } from "./components/chat/Chat";
 import { CodeBank } from "./components/codebank/CodeBank";
-import { SignIn } from "./components/auth/SignIn";
+import { Auth } from "./components/auth/Auth";
 import { SignUp } from "./components/auth/SignUp";
 import {Main} from "./components/landing/Main"
 
@@ -14,14 +14,14 @@ function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
-        <TopNavigation />
+        {/* <TopNavigation /> */}
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/auth" element={<Auth />} />
+          {/* <Route path="/signup" element={<SignUp />} /> */}
         </Routes>
         <div className="bodyconatiner">
-          <SideNavigation />
+          {/* <SideNavigation /> */}
           <section>
             <Routes>
               <Route path="/codebank" element={<CodeBank />} />
