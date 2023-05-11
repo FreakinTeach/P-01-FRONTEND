@@ -8,6 +8,7 @@ import { Chat } from "./components/chat/Chat";
 import { CodeBank } from "./components/codebank/CodeBank";
 import { SignIn } from "./components/auth/SignIn";
 import { SignUp } from "./components/auth/SignUp";
+import {Main} from "./components/landing/Main"
 
 function App() {
   return (
@@ -15,20 +16,20 @@ function App() {
       <BrowserRouter>
         <TopNavigation />
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-
         </Routes>
         <div className="bodyconatiner">
           <SideNavigation />
           <section>
             <Routes>
-              <Route path="/" element={<CodeBank />} />
+              <Route path="/codebank" element={<CodeBank />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/code" element={<Compiler />} />
             </Routes>
           </section>
-         
+
         </div>
       </BrowserRouter>
     </div>
