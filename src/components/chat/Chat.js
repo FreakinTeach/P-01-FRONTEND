@@ -29,13 +29,16 @@ export const Chat = () => {
   const [messages, setMessages] = useState([]);
   console.log(messages)
 
+
+
   const handleSendMessage = async () => {
     if (messageTyped) {
       const msgdata = {
         type: "outgoing",
         msg: {
           // name: {selectedUser.username},
-          id:selectedUser._id,
+          myId:'645924d9bac89fb71dbc7b6f',
+          userId:"645925858c1552f37f751a46",
           message: messageTyped,
           time: new Date(),
         },
@@ -50,12 +53,16 @@ export const Chat = () => {
   };
 
   useEffect(() => {
+
+    socket.emit("connected","645925858c1552f37f751a46")
+
     socket.on("recieve_message", (data) => {
-      console.log(data);
+      console.log("recieved_MSG",data);
       data.type = "incoming";
       setMessages((prevmsg) => [...prevmsg, data]);
     });
   }, [socket]);
+  
 
   useEffect(() => {
     axios
