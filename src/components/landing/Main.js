@@ -1,7 +1,7 @@
 import React from "react";
 import './main.css'
 
-function Main(){
+export const Main = ()=>{
     return(
         <div className="section-container">
             <div className="section-content">
@@ -26,5 +26,3 @@ function Main(){
         </div>
     )
 }
-
-export default Main;
