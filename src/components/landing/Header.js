@@ -1,22 +1,28 @@
 import React from "react";
 import './header.css';
+import { useNavigate } from "react-router-dom";
 
 function Header(){
+    const navigate = useNavigate()
+    let getUser = localStorage.getItem('user')
+    const user = getUser && JSON.parse(getUser) 
+    console.log(user)
+
     return(
-        <div className="navbar">
-            <div className="nav-element">
-                <ul className="navlist">
-                    <li className="list-item">Fintech</li>
-                    <li className="list-item">Services</li>
-                    <li className="list-item">Features</li>
-                    <li className="list-item">Pricing</li>
-                    <li className="list-item">News</li>
+        <div className="headercontainer">
+                <ul className="headerleft">
+                    <li>Fintech</li>
+                    <li>Services</li>
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>News</li>
                 </ul>
-                <div className="btn">
-                    <button className="btn-in">Log in</button>
-                    <button id = "sign-in" className="btn-in">Sign in</button>
+                <div className="headerright">
+                    {user && Object.values(user).length > 0 ? <img src="https://cdn.dribbble.com/users/1223630/screenshots/8115260/media/8145a871d9c4d67ec06e047ccc6574b4.gif" />
+                    :
+                    <button className="siginbtn" onClick={()=>navigate('/auth')}>Sign in</button>
+                    }
                 </div>
-            </div>
         </div>
     )
 }

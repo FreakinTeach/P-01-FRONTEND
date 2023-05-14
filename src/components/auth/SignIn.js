@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./signin.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SignIn = () => {
+  const navigate = useNavigate()
   const [user, setUser] = useState();
   const [userValues, setuserValues] = useState({
     email: "",
@@ -22,9 +24,15 @@ export const SignIn = () => {
       .get(
         `http://localhost:4000/user/${userValues.email}/${userValues.password}`
       )
-      .then((data) => {
-        setUser(data.data[0]);
-        localStorage.setItem("user", data.data[0]);
+      .then((res) => {
+        console.log(res)
+        let responz = res.data.data[0]
+        if(responz){
+          setUser(responz);
+          console.log(responz)
+          localStorage.setItem("user", JSON.stringify(responz));
+          navigate('/')
+        }
       })
       .catch((err) => console.log(err));
   };

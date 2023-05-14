@@ -1,60 +1,49 @@
-* {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: revert;
+.headercontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 22px;
 }
 
-.navbar{
+.headerleft{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 15vh;
-    width: 98vw;
-}
-
-.nav-element{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 98vw;
-}
-
-.navlist{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     list-style: none;
-    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 
-.list-item{
-    margin-left: 40px;
+.headerleft li{
     font-size: 17px;
     font-weight: 500;
 }
-.btn{
+
+.headerright{
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
+    gap: 6px;
 }
 
-.btn-in{
-    height: 31px;
+.headerright img{
     width: 70px;
-    border-radius: 16px;
-    border: 3px solid black;
-    margin-right: 14px;
+    height: 50px;
+}
+
+.siginbtn{
     font-size: 12px;
-    font-family: revert;
+    border: 1px solid black;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    color: black;
+    background-color: transparent;
+}
+
+.signupbtn{
+    border-radius: 20px;
+    border: 1px solid black;
     font-size: 12px;
     font-weight: 700;
+    padding: 8px 18px;
+    color: #ffffff;
+    background-color: black;
 }
 
-#sign-in{
-    background-color: black;
-    color: white;
-}

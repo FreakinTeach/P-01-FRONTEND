@@ -1,15 +1,25 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .bodyconatiner {
   display: flex;
+}
 
-  /* section {
-    // display: flex;
-    // flex-direction: column;
-    height: 85vh;
-  } */
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,p{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins",sans-serif;
 }
