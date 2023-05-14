@@ -1,0 +1,42 @@
+.authcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .authleftcontainer {
+    display: flex;
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .authleft {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .authleft h1 {
+    margin: 0;
+  }
+  
+  .authleft p {
+    margin: 0;
+  }
+  
+  .authright {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    background-color: #f3f5f9;
+  }
+  
+  .authright img{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  

@@ -1,0 +1,12 @@
+.inputcontainer{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .inputcontainer [type="text"],[type="password"],[type="submit"]{
+    width:auto;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ccc;
+  }

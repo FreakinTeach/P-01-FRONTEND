@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signin.css";
+import "./signup.css";
 import axios from "axios";
 
 export const SignUp = () => {
@@ -30,8 +30,7 @@ export const SignUp = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="inputcontainer">
         <label>Name:</label>
         <input
           type="text"
@@ -53,8 +52,7 @@ export const SignUp = () => {
           value={userValues.password}
           onChange={handleInput}
         />
-        <input type="submit" />
+        <input type="submit" value="sign up"/>
       </form>
-    </div>
   );
 };
