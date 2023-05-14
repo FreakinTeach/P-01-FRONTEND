@@ -1,0 +1,97 @@
+* {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: revert;
+}
+
+.section-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.section-content{
+    margin-top: 15px;
+
+}
+
+.heading{
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.section-input{
+    margin-top: 30px;
+    margin-right: -10px;
+}
+
+input{
+    height: 40px;
+    width: 300px;
+    border-radius: 70px;
+    border: 1.5px solid black;
+    text-align:center;
+}
+
+span{
+    color: rgb(88, 80, 236);
+}
+.btn-section{
+    background-color: black;
+    color: white;
+    height: 41px;
+    width: 100px;
+    border-radius:70px;
+    border: 1.5px solid black;
+    margin-left: -55px;
+}
+
+img{
+    width: 490px;
+    max-height: 350px;
+    margin-right: 1px;
+    margin-top: 30px;
+}
+.section-text,.section-input{
+    text-align: start;
+}
+
+input, button {
+    overflow: auto;
+  }
+
+  p ,h1{
+    line-height: 1.08;
+  }
+
+  p{
+    font-size: 15px;
+    font-weight:500;
+    color: rgb(70, 66, 66);
+  }
+
+  input::placeholder {
+    text-align: left;
+  }
+
+  .section-icon{
+    display: flex;
+    flex-direction: start;
+    margin-top:30px;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  h6,h5{
+    margin-left:50px;
+  }
+
+  .icon{
+    color: rgb(91, 87, 87);
+    font-size: large;
+  }
