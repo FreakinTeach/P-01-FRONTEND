@@ -1,43 +1,125 @@
-.cbcontainer{
-    /* padding: 2px 4px; */
-    font-size: 16px;
-    font-weight: 700;
-    display: flex;
-    height: 85vh;
+.cbcontainer {
+  /* padding: 2px 4px; */
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  height: 85vh;
 }
 
-.cbsidebar{
-    width: 25vw;
-    /* border: 1px solid gray; */
-    position: relative;
-    box-shadow: 1px 0px 2px 2px gray;
+.cbsidebar {
+  width: 25vw;
+  /* border: 1px solid gray; */
+  position: relative;
+  box-shadow: 1px 0px 2px 2px gray;
 }
 
-.cbsection{
-    width: 75vw;
-    /* border: 1px solid green; */
+.cbsection {
+  width: 75vw;
+  /* height: 100vh; */
 }
 
-.signinlayer{
-    height: -webkit-fill-available;
-    width: 25vw;
-    top: 0;
-    position: absolute;
-    background-color: transparent;
-    backdrop-filter:blur(2px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.signinlayer {
+  height: -webkit-fill-available;
+  width: 25vw;
+  top: 0;
+  position: absolute;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cbsection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  box-shadow: 0px 1px 2px 2px gray;
+}
+.codebank-post-btn {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.codebank-grid-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  height: 100%;
+  overflow-y: scroll;
+}
+.codebank-card {
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 12px;
+  /* cursor: pointer; */
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: fit-content;
+  position: relative;
+}
+.codebank-card-img {
+  border-radius: 12px;
+  height: 150px;
+}
+.codebank-card-title {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.codebank-card-desc {
+  padding: 0 10px 20px 10px;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+}
+.codebank-card-price {
+  padding: 0 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.codebank-card-button {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.signinlayer .signinsidebar{
-    padding: 10px 40px;
-    outline: none;
-    border: 2px solid grey;
-    background-color: transparent;
-    color: grey;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
+.codebank-card-save-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: azure;
+  cursor: pointer;
+}
+
+.codebank-main-modal {
+    
+}
+
+.signinlayer .signinsidebar {
+  padding: 10px 40px;
+  outline: none;
+  border: 2px solid grey;
+  background-color: transparent;
+  color: grey;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }
