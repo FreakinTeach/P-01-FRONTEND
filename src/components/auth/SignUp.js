@@ -21,7 +21,7 @@ export const SignUp = () => {
     axios
       .post("http://localhost:4000/user", {
         username: userValues.name,
-        usermail: userValues.usermail,
+        usermail: userValues.useremail,
         userpassword: userValues.password,
       })
       .then((data) => setuserValues({name:'', email:'', password:''}))

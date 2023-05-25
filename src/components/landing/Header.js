@@ -11,7 +11,7 @@ function Header(){
     return(
         <div className="headercontainer">
                 <ul className="headerleft">
-                    <li>Fintech</li>
+                    <li onClick={()=>navigate('/')}>Freakintech</li>
                     <li>Services</li>
                     <li>Features</li>
                     <li>Pricing</li>

@@ -9,28 +9,31 @@ import { CodeBank } from "./components/codebank/CodeBank";
 import { Auth } from "./components/auth/Auth";
 import { SignUp } from "./components/auth/SignUp";
 import {Main} from "./components/landing/Main"
+import Header from "./components/landing/Header";
 
 function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
         {/* <TopNavigation /> */}
+        <Header />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/auth" element={<Auth />} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
         </Routes>
-        <div className="bodyconatiner">
+        {/* <div className="bodyconatiner"> */}
           {/* <SideNavigation /> */}
-          <section>
+          {/* <section> */}
+          {/* <Header /> */}
             <Routes>
               <Route path="/codebank" element={<CodeBank />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/code" element={<Compiler />} />
             </Routes>
-          </section>
+          {/* </section> */}
 
-        </div>
+        {/* </div> */}
       </BrowserRouter>
     </div>
   );
