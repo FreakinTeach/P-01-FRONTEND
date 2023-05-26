@@ -3,7 +3,6 @@ import "./codebank.css";
 import Header from "../landing/Header";
 import { codeBank } from "../config/cardconfig";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
-import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 
 export const CodeBank = () => {
