@@ -1,7 +1,23 @@
 .headercontainer{
     display: flex;
     justify-content: space-between;
-    padding: 12px 22px;
+    align-items: center;
+    padding: 12px 42px;
+    background-color: rgb(19,18,23);;
+    height: 6vh;
+    border-bottom: 1px solid rgba(38, 53, 73, 1);
+}
+.headercontainer .headerbrandlogo{
+    font-family: monospace;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 900;
+    color: #ac2121;
+    margin: 0;
+}
+
+.headerbrandlogo::first-letter{
+    font-size: 36px;
 }
 
 .headerleft{
@@ -15,11 +31,13 @@
 .headerleft li{
     font-size: 16px;
     font-weight: 500;
+    color: #FFFFFF;
 }
 
 .headerright{
     display: flex;
     gap: 6px;
+    align-items: center;
 }
 
 .headerright img{
@@ -29,11 +47,11 @@
 
 .siginbtn{
     font-size: 12px;
-    border: 1px solid black;
+    border: 1px solid rgba(38, 53, 73, 1);
     padding: 8px 18px;
     border-radius: 20px;
     font-weight: 700;
-    color: black;
+    color: #ffffff;
     background-color: transparent;
 }
 
