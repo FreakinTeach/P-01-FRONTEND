@@ -7,7 +7,7 @@
     height: 6vh;
     border-bottom: 1px solid rgba(38, 53, 73, 1);
 }
-.headercontainer .headerbrandlogo{
+.headerbrandlogo{
     font-family: monospace;
     cursor: pointer;
     font-size: 28px;

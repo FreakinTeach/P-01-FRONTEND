@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "./auth.css";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
+import Header from "../landing/Header";
 
 export const Auth = () => {
   const [showSignIn, setshowSignIn] = useState(true);
   return (
+    <>
+    <Header />
     <div className="authcontainer">
       <div className="authleftcontainer">
         <div className="authleft">
@@ -30,5 +33,6 @@ export const Auth = () => {
         />
       </div>
     </div>
+    </>
   );
 };

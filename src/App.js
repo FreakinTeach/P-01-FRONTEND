@@ -8,32 +8,30 @@ import { Chat } from "./components/chat/Chat";
 import { CodeBank } from "./components/codebank/CodeBank";
 import { Auth } from "./components/auth/Auth";
 import { SignUp } from "./components/auth/SignUp";
-import {Main} from "./components/landing/Main"
+import { Main } from "./components/landing/Main";
 import Header from "./components/landing/Header";
+import { TechStack } from "./components/techstack/TechStack";
 
 function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
-        {/* <TopNavigation /> */}
-        <Header />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/auth" element={<Auth />} />
-          {/* <Route path="/signup" element={<SignUp />} /> */}
         </Routes>
-        {/* <div className="bodyconatiner"> */}
-          {/* <SideNavigation /> */}
-          {/* <section> */}
-          {/* <Header /> */}
-            <Routes>
-              <Route path="/codebank" element={<CodeBank />} />
-              <Route path="/chat" element={<Chat />} />
-              <Route path="/code" element={<Compiler />} />
-            </Routes>
-          {/* </section> */}
 
-        {/* </div> */}
+        <section className="maintechstack_sidebar">
+          <TechStack />
+          <div className="maintechstack_rightcontainer">
+          <Routes>
+            {/* <Route path="/techstack" element={<TechStack />} /> */}
+            <Route path="/codebank" element={<CodeBank />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/code" element={<Compiler />} />
+          </Routes>
+          </div>
+        </section>
       </BrowserRouter>
     </div>
   );

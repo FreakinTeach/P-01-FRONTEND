@@ -9,7 +9,7 @@ export const Main = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="maincontainer">
         <section className="lpsection1">
           <div className="maincontent">
