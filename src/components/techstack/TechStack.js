@@ -1,7 +1,6 @@
 import React from "react";
 import "./techstack.css";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { IconContext } from "react-icons";
+import { Outlet, useNavigate } from "react-router-dom";
 import {
   GrChat,
   GrSearch,
@@ -68,6 +67,10 @@ export const TechStack = () => {
           <button>Light</button>
           <button>Dark</button>
         </div> */}
+      </section>
+
+      <section className="tscontainer_rightsection">
+        <Outlet />
       </section>
     </div>
   );

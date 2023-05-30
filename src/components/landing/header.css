@@ -40,6 +40,31 @@
     align-items: center;
 }
 
+.headerloggedprofile{
+    position: relative;
+}
+
+.userdetailsdropdown{
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    width: 120px;
+    height: auto;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.userdetailsdropdown p{
+    font-size: 14px;
+    padding: 4px 2px;
+    font-weight: 600;
+    border-bottom: 1px solid #80838e;
+    cursor: pointer;
+}
+.userdetailsdropdown p:last-child{
+    border: none;
+}
+
 .headerright img{
     width: 70px;
     height: 50px;
@@ -52,6 +77,7 @@
     border-radius: 20px;
     font-weight: 700;
     color: #ffffff;
+    cursor: pointer;
     background-color: transparent;
 }
 

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
 function Header() {
   const navigate = useNavigate();
+  const [showloginDropdown,setshowloginDropdown] = useState(false)
   let getUser = localStorage.getItem("user");
   const user = getUser && JSON.parse(getUser);
-  console.log(user);
+
+  const handleLogout =()=>{
+    localStorage.removeItem("user");
+    window.location.reload()
+  }
 
   return (
     <div className="headercontainer">
@@ -23,9 +28,15 @@ function Header() {
       </ul>
       <div className="headerright">
         {user && Object.values(user).length > 0 ? (
-          <FaUserCircle style={{ color: "#ffffff", fontSize: "24px" }} />
+          <div className="headerloggedprofile">
+          <FaUserCircle style={{ color: "#ffffff", fontSize: "24px",cursor:'pointer' }} onClick={()=>setshowloginDropdown(!showloginDropdown)}/>
+          {showloginDropdown && <section className="userdetailsdropdown">
+          <p >Profile</p>
+          <p >Rank</p>
+          <p onClick={()=>handleLogout()}>Log out</p>
+          </section>}
+          </div>
         ) : (
-          // <img src="https://cdn.dribbble.com/users/1223630/screenshots/8115260/media/8145a871d9c4d67ec06e047ccc6574b4.gif" />
           <button className="siginbtn" onClick={() => navigate("/auth")}>
             Sign in
           </button>
