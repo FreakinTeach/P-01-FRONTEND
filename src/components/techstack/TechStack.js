@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./techstack.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import {
@@ -10,31 +10,38 @@ import {
 } from "react-icons/gr";
 
 export const TechStack = () => {
+  const [showmobilesidebar,setshowmobilesidebar] = useState(false)
   const currentroute = window.location.pathname;
-  console.log(currentroute)
+  // console.log(currentroute)
   const navigate = useNavigate();
+
+  const handleNavigation = (path)=>{
+    navigate(path)
+    setshowmobilesidebar(false)
+  }
   return (
     <div className="tscontainer">
-      <section className="tscontainer_leftsection">
+      <section className={showmobilesidebar ? "tscontainer_leftsection" : "tscontainer_leftsection hidecontent"}>
         <p className="headerbrandlogo" onClick={() => navigate("/")}>
-          FreakinTech
+          FreakinTech  
         </p>
+        <span style={{color:'white'}} onClick={()=>setshowmobilesidebar(false)}>X</span>
 
         <div className="tsleftsection_options">
           <section className="tsfeaturelistsection">
-            <p onClick={()=>navigate('/codebank')}  className = {currentroute == "/codebank" && "selected"}>
+            <p onClick={()=>handleNavigation('/codebank')}  className = {currentroute == "/codebank" && "selected"}>
               <span>
                 <GrCode style={{ backgroundColor: "red" }} />
                 Code bank
               </span>
             </p>
-            <p onClick={()=>navigate('/chat')} className = {currentroute == "/chat" && "selected"}>
+            <p onClick={()=>handleNavigation('/chat')} className = {currentroute == "/chat" && "selected"}>
               <span>
                 <GrChat style={{ backgroundColor: "green" }} />
                 Chats
               </span>
             </p>
-            <p onClick={()=>navigate('/code')} className = {currentroute == "/code" && "selected"}>
+            <p onClick={()=>handleNavigation('/code')} className = {currentroute == "/code" && "selected"}>
               <span>
                 <GrSearch style={{ backgroundColor: "orange" }} />
                 Compiler
@@ -69,7 +76,8 @@ export const TechStack = () => {
         </div> */}
       </section>
 
-      <section className="tscontainer_rightsection">
+      <section className={showmobilesidebar ? "tscontainer_rightsection hidecontent" : "tscontainer_rightsection"}>
+        <p onClick={()=>setshowmobilesidebar(true)}>Show</p>
         <Outlet />
       </section>
     </div>

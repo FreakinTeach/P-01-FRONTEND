@@ -79,3 +79,46 @@
 .selected {
   background-color: rgba(38, 53, 73, 1);
 }
+
+@media screen and (max-width: 768px) {
+  .tscontainer_leftsection{
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: none; */
+  }
+  .tscontainer_rightsection{
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: none; */
+  }
+
+  .hidecontent{
+    display: none;
+  }
+
+  .tsfeaturelistsection p{
+    width: 80vw;
+  }
+
+  .suggestion_section p{
+    width: 80vw;
+  }
+
+  /* .cbcontainer{
+
+  } */
+
+  .cb-grid-parent{
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  .cb_cards{
+    width: 94vw;
+  }
+}
