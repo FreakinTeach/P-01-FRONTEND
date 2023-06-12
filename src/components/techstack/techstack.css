@@ -27,24 +27,53 @@
   flex-direction: column;
   gap: 20px;
 }
-.tsleftsection_options section {
+/* .tsleftsection_options section {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* padding: 4px 12px; */
+} */
+/* .tsleftsection_options section p {
+  cursor: pointer;
+  width: 14vw;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+} */
+.tsleftsection_options section p span {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  /* justify-content: center; */
 }
-.tsleftsection_options section p {
+
+.tsfeaturelistsection{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tsfeaturelistsection p{
   cursor: pointer;
   width: 14vw;
   color: #ffffff;
   padding: 6px 14px;
   border-radius: 8px;
 }
-.tsleftsection_options section p span {
+
+.suggestion_section {
   display: flex;
-  gap: 22px;
-  align-items: center;
-  /* justify-content: center; */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestion_section  p {
+  cursor: pointer;
+  width: 14vw;
+  color: #80838e;
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .selected {

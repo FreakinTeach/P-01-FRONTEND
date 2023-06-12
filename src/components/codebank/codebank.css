@@ -2,132 +2,82 @@
   height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
 }
 
-/* .cbsidebar {
-  width: 25vw;
-  position: relative;
-  border: 1px solid rgba(38, 53, 73, 1);
-} */
-
-/* .cbsidebar p{
-  color: #ffffff;
-} */
-
-.cbsection {
-  /* width: 75vw; */
-  /* height: 100vh; */
-}
-/* 
-.signinlayer {
-  height: -webkit-fill-available;
-  width: 25vw;
-  top: 0;
-  position: absolute;
-  background-color: transparent;
-  backdrop-filter: blur(1px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-.cbsection-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid rgba(38, 53, 73, 1);
-  background-color: transparent;
-  /* box-shadow: 0px 1px 2px 2px gray; */
-  /* border: 1px solid rgba(38, 53, 73, 1); */
-}
-.cbsection-header h2 {
-  color: rgb(19, 18, 23);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.cbsection-header span{
-  display: flex;
-  gap: 10px;
-}
-
-.cbsection-header span img {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-}
-.cbsection-header span .codebank-post-btn {
-  padding: 6px 18px;
-  border: 1px solid #ac2121;
-  color: #ac2121;
-  border-radius: 12px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-}
-.codebank-grid-parent {
+.cb-grid-parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   padding: 10px;
   height: 100%;
   overflow-y: scroll;
 }
-.codebank-card {
+
+.cb_cards {
   border: 1px solid gray;
   background-color: white;
   border-radius: 12px;
-  /* cursor: pointer; */
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 35vw;
   height: fit-content;
   position: relative;
 }
-.codebank-card-img {
-  border-radius: 12px;
-  height: 150px;
-}
-.codebank-card-title {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 600;
+
+.cb_cards h2{
+  padding: 4px 8px;
+  font-size: 18px;
+  font-weight: 700;
   margin: 0;
+  border-bottom: 1px solid #ac2121;
 }
-.codebank-card-desc {
-  padding: 0 10px 20px 10px;
-  font-size: 10px;
+
+.cb_cards_main{
+  display: flex;
+  border-bottom: 1px solid #ac2121;
+}
+
+.cb_cards_main .cbcard_left{
+  width: 80%;
+}
+
+.cb_card_desc {
+  padding: 4px 8px;
+  font-size: 14px;
   font-weight: 400;
+  color: #80838e;
+  display: flex;
+  gap: 4px;
   margin: 0;
 }
-.codebank-card-price {
-  padding: 0 10px 10px 10px;
+
+.cb_cards_main .cbcard_right{
+  width: 20%;
+}
+
+.cbcard_right p{
+  /* padding: 0 10px 10px 10px; */
   font-size: 14px;
   font-weight: 600;
   margin: 0;
 }
-.codebank-card-button {
-  padding: 10px 20px;
+
+.cb_cards_footer{
+  display: flex;
+  padding: 4px 8px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cb_cards_footer button {
+  padding: 8px 14px;
   border: 1px solid gray;
   background-color: rgba(38, 53, 73, 1);
   color: white;
-  border-radius: 0 0 12px 12px;
+  border-radius: 16px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-}
-
-.codebank-card-save-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: azure;
-  cursor: pointer;
-}
-
-.codebank-main-modal {
 }
 
 .signinlayer .signinsidebar {

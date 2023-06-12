@@ -18,6 +18,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import axios from "axios";
+import { TSHeader } from "../techstack/TSHeader";
 
 const socket = io.connect("http://localhost:4000");
 
@@ -72,8 +73,10 @@ export const Chat = () => {
   }, []);
 
   return (
+    <>
+    <TSHeader layout={'Welcome to Chat'}/>
     <div className="chatcontainer">
-      <MainContainer>
+      <MainContainer style={{border:'none'}}>
         <Sidebar position="left" scrollable={false}>
           <Search placeholder="Search..." />
           <ConversationList>
@@ -131,5 +134,6 @@ export const Chat = () => {
         )}
       </MainContainer>
     </div>
+    </>
   );
 };

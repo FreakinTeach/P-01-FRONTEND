@@ -7,6 +7,7 @@ import axios from "axios";
 import "brace/mode/javascript";
 import "brace/theme/tomorrow_night";
 import "./compiler.css";
+import { TSHeader } from "../techstack/TSHeader";
 
 export const Compiler = () => {
   const [storevalue, setstorevalue] = useState();
@@ -38,7 +39,16 @@ export const Compiler = () => {
 
   return (
     <section className="compilerContainer">
+      <TSHeader layout={'Welcome to Compiler'}/>
       <div className="editorcompilerContainer">
+        <section className="compilereditoreheader">
+          <p>JavaScript</p>
+          <span>
+            <p onClick={showresult}>Run</p>
+            <p>Copy code</p>
+          </span>
+        </section>
+
         <AceEditor
           mode="javascript"
           theme="tomorrow_night"
@@ -50,14 +60,14 @@ export const Compiler = () => {
             enableLiveAutocompletion: true,
             enableSnippets: true,
           }}
-          style={{ width: "50vw", height: "85vh"}}
+          style={{ width: "50vw", height: "50vh", fontSize: "16px" }}
         />
-        <section>
-          <p>Result:</p>
-          <p>{compiledResult}</p>
+
+        <section className="editorcompilerresult">
+          <p>Output:</p>
+          <span>{compiledResult}</span>
         </section>
       </div>
-      <button onClick={showresult}>Run&Execute</button>
     </section>
   );
 };

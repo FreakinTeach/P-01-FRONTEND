@@ -1,6 +1,66 @@
 .chatcontainer{
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
     font-size: 16px;
     font-weight: 700;
     height: calc( 90vh - 20px );
+}
+
+.cs-main-container{
+    border-radius: 16px;
+}
+
+.cs-main-container .cs-search{
+    background-color: rgba(38, 53, 73, 1);
+}
+
+.cs-main-container .cs-search__input{
+    background-color: rgba(38, 53, 73, 1);
+}
+
+.cs-main-container .cs-search__search-icon{
+    color: #ffffff;
+}
+
+.cs-chat-container{
+
+}
+.cs-chat-container .cs-conversation-header{
+    background-color: rgba(38, 53, 73, 1);
+    color: #ffffff;
+}
+
+.cs-conversation-header__back .cs-conversation-header .cs-button--arrow{
+    color: #ffffff;
+}
+
+.cs-conversation-header .cs-conversation-header__content .cs-conversation-header__user-name{
+    background-color: rgba(38, 53, 73, 1);
+    color: #ffffff;
+}
+
+.cs-conversation-header .cs-conversation-header__content .cs-conversation-header__info{
+    background-color: rgba(38, 53, 73, 1);
+    color: #ffffff;
+}
+/* 
+.cs-button .cs-button--voicecall{
+    color: #ffffff;
+} */
+
+.cs-message-input .cs-message-input__content-editor-wrapper{
+    background-color: rgba(38, 53, 73, 1);
+    color: #ffffff;
+}
+
+.cs-button--attachment{
+    color: rgba(38, 53, 73, 1);
+}
+
+.cs-message-input__content-editor-wrapper .cs-message-input__content-editor{
+    background-color: rgba(38, 53, 73, 1);
+    color: #ffffff;
+}
+.cs-message-input__tools .cs-button--send{
+    background-color: transparent;
+    color: rgba(38, 53, 73, 1);
 }

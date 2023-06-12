@@ -21,7 +21,7 @@ export const TechStack = () => {
         </p>
 
         <div className="tsleftsection_options">
-          <section>
+          <section className="tsfeaturelistsection">
             <p onClick={()=>navigate('/codebank')}  className = {currentroute == "/codebank" && "selected"}>
               <span>
                 <GrCode style={{ backgroundColor: "red" }} />
@@ -54,7 +54,7 @@ export const TechStack = () => {
             </p>
           </section>
           <hr style={{ color: "rgba(38, 53, 73, 1)", margin: "0" }} />
-          <section>
+          <section className="suggestion_section">
             <p>Ranked profile</p>
             <p>Top Answers</p>
             <p>Top Questions</p>
