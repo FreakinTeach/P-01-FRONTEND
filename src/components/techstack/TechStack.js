@@ -25,7 +25,7 @@ export const TechStack = () => {
         <p className="headerbrandlogo" onClick={() => navigate("/")}>
           FreakinTech  
         </p>
-        <span style={{color:'white'}} onClick={()=>setshowmobilesidebar(false)}>X</span>
+        <span className="sidebarclose" onClick={()=>setshowmobilesidebar(false)}>X</span>
 
         <div className="tsleftsection_options">
           <section className="tsfeaturelistsection">
@@ -77,7 +77,7 @@ export const TechStack = () => {
       </section>
 
       <section className={showmobilesidebar ? "tscontainer_rightsection hidecontent" : "tscontainer_rightsection"}>
-        <p onClick={()=>setshowmobilesidebar(true)}>Show</p>
+        <p className="sidebaropen" onClick={()=>setshowmobilesidebar(true)}>Show</p>
         <Outlet />
       </section>
     </div>
