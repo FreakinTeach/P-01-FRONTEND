@@ -8,6 +8,7 @@ import { CodeBank } from "./components/codebank/CodeBank";
 import { Auth } from "./components/auth/Auth";
 import { Main } from "./components/landing/Main";
 import { TechStack } from "./components/techstack/TechStack";
+import { UserSetting } from "./components/settings/UserSetting";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             <Route path="/codebank" element={<CodeBank />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/code" element={<Compiler />} />
+           <Route path="/setting" element={<UserSetting/>} />
+
           </Route>
         </Routes>
       </BrowserRouter>

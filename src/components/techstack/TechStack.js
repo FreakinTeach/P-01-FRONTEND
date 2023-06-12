@@ -46,7 +46,7 @@ export const TechStack = () => {
                 Manage subscription
               </span>
             </p>
-            <p>
+            <p onClick={()=>navigate("/setting")} className={currentroute=="/setting" && "selected"}>
               <span>
                 <GrSettingsOption style={{ backgroundColor: "purple" }} />
                 Settings
