@@ -1,12 +1,6 @@
 .maincontainer {
   display: flex;
   flex-direction: column;
-  /* background: rgb(19, 18, 23);
-  background: linear-gradient(
-    75deg,
-    rgba(19, 18, 23, 1) 43%,
-    rgba(38, 53, 73, 1) 96%
-  ); */
 }
 
 .maincontainer .lpsection1 {
@@ -91,4 +85,47 @@
   width: 35vw;
   /* box-shadow: -30px 28px 12px rgb(19, 18, 23); */
   box-shadow: -8px 6px 12px 4px rgb(19, 18, 23);
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .maincontent h1 {
+    font-size: 35px;
+    line-height: 52px;
+}
+.explorebtn{
+  align-self: center;
+}
+.maincontainer .lpsection1 {
+  padding: 8px 12px;
+  flex-direction: column;
+  gap: 14px;
+}
+.explorebtn button {
+  width: 50vw;
+}
+
+.maincontainer .lpsection2 div{
+  border: none;
+}
+
+.lpsection2{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 24px 2px;
+}
+.headerleft{
+  display: none;
+}
+.imagesection{
+ align-self: center;
+}
+
+.imagesection img{
+  /* display: none; */
+  height: 26vh;
+    width: 65vw;
+}
+
 }

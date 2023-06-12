@@ -91,3 +91,8 @@
     background-color: black;
 }
 
+@media screen and (max-width: 768px) {
+    .headercontainer{
+        padding: 8px 12px;
+    }
+}
