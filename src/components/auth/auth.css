@@ -43,3 +43,19 @@
   background-repeat: no-repeat;
   height: 90vh;
 }
+@media screen and (max-width: 767px) {
+    .authright {
+    display: none; 
+  }  
+  .authleftcontainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  
+  }
+  .authleft{
+    border-radius: 30px;
+  }
+}

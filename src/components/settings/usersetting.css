@@ -1,3 +1,8 @@
-.uscontainer{
-    background-color: red;
+
+.uscontainerheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(38, 53, 73, 1);
 }

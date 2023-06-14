@@ -1,8 +1,12 @@
-import React from 'react'
-import "./usersetting.css"
+import React from "react";
+import "./usersetting.css";
 
 export const UserSetting = () => {
   return (
-    <div className='uscontainer'>UserSetting</div>
-  )
-}
+    <div className="uscontainermain">
+      <div className="uscontainerheader" >
+       <b> Welcome to Settings</b> 
+      </div>
+    </div>
+  );
+};
