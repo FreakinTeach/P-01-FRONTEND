@@ -1,8 +1,51 @@
-
-.uscontainerheader{
+.uscontainerheader {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid rgba(38, 53, 73, 1);
-}
+    flex-direction: column;
+  }
+  
+  .settings11 {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .settings12 {
+    padding: 10px;
+    height: 30vh;
+    margin: 10px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    
+  }
+  
+  .settings121 {
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-start;
+    color: #829191;
+    
+  }
+  .settings122{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .settings122 img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 6px 10px;
+  }
+  .settings122{
+    font-size: 13px;
+  }
+  .settings1232 button{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    margin: 3px 43px;
+    padding: 6px;
+    border-radius: 7px;
+
+  }
+  
+  
