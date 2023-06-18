@@ -6,7 +6,8 @@ import landingImage from '../../assets/landing.png'
 
 export const Main = () => {
   const navigate = useNavigate();
-
+  let userLoggedIn = localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"));
+  let arrow = "->"
   return (
     <>
       <Header />
@@ -22,12 +23,12 @@ export const Main = () => {
             </h1>
             <p>
               You will meet the most intresting techy's here
-              <br /> Hire Teach Learn Earn
+              <br /> Hire {arrow} Teach {arrow} Learn {arrow} Earn
             </p>
 
             <div className="explorebtn">
               {/* <input type="text" placeholder="Enter your email" /> */}
-              <button className="btnmain" onClick={() => navigate("/codebank")}>
+              <button className="btnmain" onClick={() => navigate(userLoggedIn ? "/codebank" : "/auth")}>
                 Get Started
               </button>
             </div>

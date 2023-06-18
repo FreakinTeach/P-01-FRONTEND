@@ -19,18 +19,15 @@ import {
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import axios from "axios";
 import { TSHeader } from "../techstack/TSHeader";
+import { NODE_URL } from "../../config/globalconfig";
 
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect(process.env.REACT_SERVER_NODE_URL);
 
 export const Chat = () => {
   const [users, setUsers] = useState();
   const [messageTyped, setmessageTyped] = useState();
   const [selectedUser, setSelectedUser] = useState();
-
   const [messages, setMessages] = useState([]);
-  console.log(messages)
-
-
 
   const handleSendMessage = async () => {
     if (messageTyped) {
@@ -67,7 +64,7 @@ export const Chat = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/user")
+      .get(`${NODE_URL}/user`)
       .then((res) => setUsers(res.data.data))
       .catch((err) => console.log(err));
   }, []);

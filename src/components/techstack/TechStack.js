@@ -12,7 +12,6 @@ import {
 export const TechStack = () => {
   const [showmobilesidebar,setshowmobilesidebar] = useState(false)
   const currentroute = window.location.pathname;
-  // console.log(currentroute)
   const navigate = useNavigate();
 
   const handleNavigation = (path)=>{

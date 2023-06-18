@@ -43,8 +43,9 @@
   background-repeat: no-repeat;
   height: 90vh;
 }
-@media screen and (max-width: 767px) {
-    .authright {
+
+@media screen and (max-width: 768px) {
+  .authright {
     display: none; 
   }  
   .authleftcontainer{

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./signin.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { NODE_URL } from "../../config/globalconfig";
 
 export const SignIn = () => {
   const navigate = useNavigate()
@@ -22,16 +23,14 @@ export const SignIn = () => {
     e.preventDefault();
     axios
       .get(
-        `http://localhost:4000/user/${userValues.email}/${userValues.password}`
+        `${NODE_URL}/user/${userValues.email}/${userValues.password}`
       )
       .then((res) => {
-        console.log(res)
         let responz = res.data.data[0]
         if(responz){
           setUser(responz);
-          console.log(responz)
           localStorage.setItem("user", JSON.stringify(responz));
-          navigate('/')
+          window.location.replace('/')
         }
       })
       .catch((err) => console.log(err));

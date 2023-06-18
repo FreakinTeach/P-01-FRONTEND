@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./signup.css";
 import axios from "axios";
+import { NODE_URL } from "../../config/globalconfig";
 
 export const SignUp = () => {
   const [userValues, setuserValues] = useState({
@@ -19,14 +20,13 @@ export const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/user", {
+      .post(`${NODE_URL}/user`, {
         username: userValues.name,
         usermail: userValues.useremail,
         userpassword: userValues.password,
       })
       .then((data) => setuserValues({name:'', email:'', password:''}))
       .catch((err) => console.log(err));
-    console.log(userValues.name, userValues.email, userValues.password);
   };
 
   return (
