@@ -21,22 +21,24 @@ import axios from "axios";
 import { TSHeader } from "../techstack/TSHeader";
 import { NODE_URL } from "../../config/globalconfig";
 
-const socket = io.connect(process.env.REACT_SERVER_NODE_URL);
+const socket = io.connect(NODE_URL);
 
 export const Chat = () => {
-  const [users, setUsers] = useState();
+  let getUser = localStorage.getItem("user");
+  const loggedinUser = getUser && JSON.parse(getUser);
+  const [chatusers, setChatUsers] = useState();
   const [messageTyped, setmessageTyped] = useState();
   const [selectedUser, setSelectedUser] = useState();
   const [messages, setMessages] = useState([]);
 
   const handleSendMessage = async () => {
-    if (messageTyped) {
+    if (messageTyped && loggedinUser) {
       const msgdata = {
         type: "outgoing",
         msg: {
           // name: {selectedUser.username},
-          myId:'645924d9bac89fb71dbc7b6f',
-          userId:"645925858c1552f37f751a46",
+          myId:loggedinUser._id,
+          userId:selectedUser._id,
           message: messageTyped,
           time: new Date(),
         },
@@ -48,14 +50,14 @@ export const Chat = () => {
 
   const handleSelectedUser = (user) => {
     setSelectedUser(user);
+    setMessages([])
   };
 
   useEffect(() => {
-
-    socket.emit("connected","645925858c1552f37f751a46")
+    socket.emit("connected",loggedinUser._id)
 
     socket.on("recieve_message", (data) => {
-      console.log("recieved_MSG",data);
+     
       data.type = "incoming";
       setMessages((prevmsg) => [...prevmsg, data]);
     });
@@ -65,7 +67,7 @@ export const Chat = () => {
   useEffect(() => {
     axios
       .get(`${NODE_URL}/user`)
-      .then((res) => setUsers(res.data.data))
+      .then((res) => setChatUsers(res.data.data))
       .catch((err) => console.log(err));
   }, []);
 
@@ -77,9 +79,10 @@ export const Chat = () => {
         <Sidebar position="left" scrollable={false}>
           <Search placeholder="Search..." />
           <ConversationList>
-            {users &&
-              users.length &&
-              users.map((user) => {
+            {chatusers &&
+              chatusers.length &&
+              chatusers.map((user) => {
+                if(user._id != loggedinUser._id)
                 return (
                   <Conversation
                     name={user.username}
