@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { NODE_URL } from "../../config/globalconfig";
 
-export const SignIn = () => {
+export const SignIn = ({setshowtoast}) => {
   const navigate = useNavigate()
   const [user, setUser] = useState();
   const [userValues, setuserValues] = useState({
@@ -22,8 +22,8 @@ export const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get(
-        `${NODE_URL}/user/${userValues.email}/${userValues.password}`
+      .post(
+        `${NODE_URL}/user/auth`,{email:userValues.email,password:userValues.password}
       )
       .then((res) => {
         let responz = res.data.data[0]
@@ -32,20 +32,26 @@ export const SignIn = () => {
           localStorage.setItem("user", JSON.stringify(responz));
           window.location.replace('/')
         }
+        else{
+          setshowtoast(true)
+        }
       })
       .catch((err) => console.log(err));
   };
 
   return (
+    <>
       <form onSubmit={handleSubmit} className="inputcontainer">
-        <label>Email:</label>
+         <h1>Welcome Back</h1>
+          <p>Please enter your details and sign In</p>
+        <label>Email</label>
         <input
           type="text"
           name="email"
           value={userValues.email}
           onChange={handleInput}
         />
-        <label>Password:</label>
+        <label>Password</label>
         <input
           type="text"
           name="password"
@@ -54,5 +60,8 @@ export const SignIn = () => {
         />
         <input type="submit" value="Sign In" />
       </form>
+
+        
+      </>
   );
 };

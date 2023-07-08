@@ -1,12 +1,32 @@
 .inputcontainer{
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .inputcontainer [type="text"],[type="password"],[type="submit"]{
-    width:auto;
-    border-radius: 5px;
-    padding: 12px;
-    border: 1px solid #ccc;
-  }
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputcontainer [type="text"],[type="password"]{
+  width:auto;
+  border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.inputcontainer [type="submit"]{
+  width: auto;
+  border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: rgba(38, 53, 73, 1);
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+.inputcontainer [type="submit"]:hover{
+  background-color: rgba(19, 18, 23, 1);
+  border: 1px solid rgba(38, 53, 73, 1);
+}

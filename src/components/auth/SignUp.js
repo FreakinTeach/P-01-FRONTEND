@@ -31,21 +31,23 @@ export const SignUp = () => {
 
   return (
       <form onSubmit={handleSubmit} className="inputcontainer">
-        <label>Name:</label>
+        <h1>Create an account</h1>
+        <p>Please enter your details and signup</p>
+        <label>Name</label>
         <input
           type="text"
           name="name"
           value={userValues.name}
           onChange={handleInput}
         />
-        <label>Email:</label>
+        <label>Email</label>
         <input
           type="text"
           name="email"
           value={userValues.email}
           onChange={handleInput}
         />
-        <label>Password:</label>
+        <label>Password</label>
         <input
           type="text"
           name="password"

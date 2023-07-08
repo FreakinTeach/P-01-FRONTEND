@@ -1,6 +1,6 @@
 import React from "react";
-import "./app.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import "./app.css";
 import { Compiler } from "./components/compiler/Compiler";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Chat } from "./components/chat/Chat";
